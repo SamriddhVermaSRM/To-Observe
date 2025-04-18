@@ -1,0 +1,15 @@
+nav {
+	height: 90px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+nav img {
+	height: 100%;
+	padding: 10px;
+}
+
+nav ul {
+	display: flex;
+}
