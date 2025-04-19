@@ -1,0 +1,36 @@
+{
+	"name": "Being Good Enough?",
+	"description": "A training module to help you understand the importance of being good enough.",
+	"lessons": [
+		{
+			"speaker": "a",
+			"message": "Hey! I'm kind of nervous, but also excited to see how we did on the exam."
+		},
+		{
+			"speaker": "b",
+			"message": "Alright everyone, here are your results. Hope you’re proud of the effort you put in."
+		},
+		{
+			"speaker": "c",
+			"message": "You scored 60%. How are you feeling about that?"
+		},
+		{
+			"speaker": "a",
+			"message": "Your best friend got 95%. They’re always topping the class. Honestly, it feels like we’ll never be that good. They just seem naturally smart, and we’re... not."
+		},
+		{
+			"speaker": "c",
+			"message": "Hold on—before you decide your potential and worth, it's important to ask yourself a question: Did you honestly prepare hard enough with focus for the exam?",
+			"choices": [
+				{
+					"message": "Yes",
+					"next": 1
+				},
+				{
+					"message": "No",
+					"next": -1
+				}
+			]
+		}
+	]
+}
