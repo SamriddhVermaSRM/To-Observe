@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Arrow from '../../Components/Arrow';
 import Navbar from '../../Components/Navbar/Navbar';
 import { motion } from 'motion/react';
@@ -10,6 +11,10 @@ function Home() {
 			<main>
 				<Navbar />
 				<div className='home'>
+					<div className='slogan'>
+						<h1>To Observe</h1>
+						<h3>bridging the gaps to a better living society</h3>
+					</div>
 					<div className='student'>
 						<img
 							src='/student-experiment.png'
@@ -56,6 +61,7 @@ function Home() {
 							5 reasons why.......
 						</motion.h4>
 					</div>
+					<div className='guide-img-txt'>Let us Help you untangle...</div>
 					<img
 						className='guide-img'
 						src='/guide.png'
@@ -66,45 +72,54 @@ function Home() {
 				<div className='about-us'>
 					<h1 className='title'>ABOUT US</h1>
 					<p className='description'>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
-						provident vitae non voluptates quam! Nemo, dolorem nulla ab
-						praesentium repellat et quaerat, aperiam obcaecati molestiae
-						asperiores consequatur temporibus harum itaque!
+						To Observe is an interactive digital platform designed to work in
+						collaboration with schools and educational institutions. It provides
+						realistic simulations of day-to-day social and emotional challenges
+						faced by students. In these simulations, students take on the role
+						of a character in a virtual storyline, making choices and facing
+						consequences based on real-life scenarios. These modules cover
+						topics often left out of traditional curriculums—like dealing with
+						criticism, anxiety, jealousy, social media/virtual addiction,
+						insecurity, relationships, and more. Our aim is to bridge the
+						growing gap between emotional awareness and digital literacy,
+						helping students build real-life values while learning to navigate
+						the complexities of the online world.
 					</p>
 					<div className='box'>
-						<div className='container'>
-							<h1>ASSESMENT</h1>
-							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
-								provident vitae non voluptates quam! Nemo, dolorem nulla ab
-								praesentium repellat et quaerat, aperiam obcaecati molestiae
-								asperiores consequatur temporibus harum itaque!
-							</p>
-						</div>
-						<div className='container'>
-							<h1>PERSONALIZED LEARNING</h1>
-							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
-								provident vitae non voluptates quam! Nemo, dolorem nulla ab
-								praesentium repellat et quaerat, aperiam obcaecati molestiae
-								asperiores consequatur temporibus harum itaque!
-							</p>
-						</div>
-						<div className='container'>
-							<h1>ONGOING ASSESMENT</h1>
-							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
-								provident vitae non voluptates quam! Nemo, dolorem nulla ab
-								praesentium repellat et quaerat, aperiam obcaecati molestiae
-								asperiores consequatur temporibus harum itaque!
-							</p>
-						</div>
+						<Link
+							to='/how-it-works'
+							className='container'
+						>
+							<h1>How Exactly We Work?</h1>
+						</Link>
+						<Link
+							to='/medical-significance'
+							className='container'
+						>
+							<h1>Importance & Medical Significance</h1>
+						</Link>
+						<Link
+							to='/success-stories'
+							className='container'
+						>
+							<h1>Success Stories</h1>
+						</Link>
 					</div>
 				</div>
 				<div className='partners'>
 					<div className='partner-nav'>
-						<button onClick={() => setForm(0)}>Company</button>
-						<button onClick={() => setForm(1)}>Instituion</button>
+						<button
+							onClick={() => setForm(0)}
+							className={form === 0 ? 'active' : ''}
+						>
+							Company
+						</button>
+						<button
+							onClick={() => setForm(1)}
+							className={form === 1 ? 'active' : ''}
+						>
+							Instituion
+						</button>
 					</div>
 					<RenderForms form={form} />
 				</div>

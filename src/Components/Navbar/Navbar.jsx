@@ -34,6 +34,7 @@ function Navbar() {
 						src='/logo.png'
 						alt=''
 					/>
+					<h1 className='logo-text'>To Observe</h1>
 				</a>
 				<ul>
 					<li>
