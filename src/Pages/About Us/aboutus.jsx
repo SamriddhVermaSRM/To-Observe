@@ -1,23 +1,26 @@
 export function HowItBeWorking() {
 	return (
 		<div className='hiw'>
-			<h1>How It Works</h1>
+			<h1 className='howw'>How It Works?</h1>
+			<br />
 			<p>
 				{' '}
 				How We Work To Observe is a purpose-driven social enterprise dedicated
 				to nurturing emotional intelligence, self-regulation, and ethical
-				thinking among students aged 5 to 18 — the most critical years for
-				building lifelong values and resilience. We collaborate directly with
-				schools and educational institutions to seamlessly integrate our program
-				into their ecosystem. Our goal is to foster emotionally aware,
-				empathetic, and self-managed individuals, helping reduce conflicts,
-				bullying, and study-related stress — ultimately empowering students to
-				thrive both academically and personally. Our Model <br />
-				We offer a 15-day interactive program, conducted at regular intervals
-				throughout the academic year. Each session is thoughtfully designed and
-				delivered by expert trainers, combining: Virtual Scenarios to help
-				students experience real-life emotional and ethical challenges in a
-				safe, simulated environment
+				thinking among students aged 5 to 18 most critical years for building
+				lifelong values and resilience. <br />
+				We collaborate directly with schools and educational institutions to
+				seamlessly integrate our program into their ecosystem.
+				<br /> Our goal is to foster emotionally aware, empathetic, and
+				self-managed individuals, helping reduce conflicts, bullying, and
+				study-related stress ultimately empowering students to thrive both
+				academically and personally.
+				<br />
+				Our Model We offer a 15-day interactive program, conducted at regular
+				intervals throughout the academic year. <br />
+				Each session is thoughtfully designed and delivered by expert trainers,
+				combining: Virtual Scenarios to help students experience real-life
+				emotional and ethical challenges in a safe, simulated environment
 				<br />
 				Real-World Practice offline guided activities and reflections that allow
 				students to apply what they've learned
@@ -27,10 +30,10 @@ export function HowItBeWorking() {
 				<br />
 				Our program is created and continuously refined by a panel of
 				psychologists, educators, and emotional intelligence experts, with
-				insights powered by AI-based analysis tools — ensuring age-appropriate,
+				insights powered by AI-based analysis tools ensuring age-appropriate,
 				impactful learning for every child. Whether you're a public school
 				looking for subsidized or CSR-supported learning, or a private
-				institution aiming to elevate student well-being — To Observe is here to
+				institution aiming to elevate student well-being To Observe is here to
 				build a stronger, kinder, and more emotionally intelligent generation.
 			</p>
 		</div>
@@ -48,8 +51,9 @@ export function Success() {
 
 export function MedicalSignificance() {
 	return (
-		<div>
-			<h1>Medical Significance</h1>
+		<div className='hiw'>
+			<h1 className='howw'>Medical Significance</h1>
+			<br />
 			<p>
 				The Growing Concern India is witnessing a significant rise in mental
 				health issues among children and adolescents. Key statistics include:
@@ -61,23 +65,18 @@ export function MedicalSignificance() {
 				anxiety, and low self-esteem
 				<br />
 				Cyberbullying: A McAfee report revealed that 85% of Indian children have
-				experienced cyberbullying, the highest globally
-				<br />
-				The Role of "To Observe"
-				<br />
-				"To Observe" project aims to mitigate these issues by implementing a
-				structured program within schools that focuses on: Emotional
-				Intelligence Development: Teaching students to recognize, understand,
-				and manage their emotions effectively.
+				experienced cyberbullying, the highest globally The Role of "To Observe"
+				project aims to mitigate these issues by implementing a structured
+				program within schools that focuses on: Emotional Intelligence
+				Development: Teaching students to recognize, understand, and manage
+				their emotions effectively.
 				<br />
 				Self-Regulation Skills: Equipping students with strategies to control
-				impulses, manage stress, and make responsible decisions.
-				<br />
-				Ethical Thinking: Encouraging students to consider the moral
-				implications of their actions and to develop empathy towards others.
-				<br />
-				Real-World Application: Providing scenarios and role-playing exercises
-				that allow students to apply these skills in practical situations.
+				impulses, manage stress, and make responsible decisions. Ethical
+				Thinking: Encouraging students to consider the moral implications of
+				their actions and to develop empathy towards others. Real-World
+				Application: Providing scenarios and role-playing exercises that allow
+				students to apply these skills in practical situations.
 			</p>
 		</div>
 	);

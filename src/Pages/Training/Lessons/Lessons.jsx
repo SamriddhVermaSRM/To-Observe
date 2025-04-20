@@ -1,22 +1,59 @@
 import { useEffect, useState } from 'react';
+import {
+	getLocalStorage,
+	keyExists,
+	setLocalStorage,
+} from '../../../Utils/LocalStorage';
 
 function Lessons({ question, setCur, cur, setFinished }) {
 	const [loadedAt, setLodedAt] = useState(Date.now());
 	console.log(cur);
 
-	const handleSubmit = (e) => {
-		e.preventDefault();
+	const getTime = () => {
 		const time = new Date(Date.now() - loadedAt);
-		console.log(time);
-		console.log({
+		return {
 			m: time.getMinutes() - 30,
 			s: time.getSeconds(),
 			ms: time.getMilliseconds(),
-		});
+		};
+	};
+
+	const handleLogging = () => {
+		const timeRecord = getTime();
+		let records = [];
+		if (keyExists('student-records')) {
+			records = getLocalStorage('student-records');
+			console.log('stdrec', records);
+		}
+		const student = getLocalStorage('student-login');
+		console.log('stdddd', student);
+
+		records.push({ student, question, ans: null, timeRecord });
+		setLocalStorage('student-records', records);
+	};
+
+	const handleClick = () => {
+		handleLogging();
+		if (!question.end) setCur(cur + 1);
+		else setFinished(true);
+	};
+
+	const handleSubmit = (e) => {
+		e.preventDefault();
 		const data = new FormData(e.target);
 		const ans = data.get('ans');
-		console.log(ans);
 
+		const timeRecord = getTime();
+		let records = [];
+		if (keyExists('student-records')) {
+			records = getLocalStorage('student-records');
+			console.log('stdrec', records);
+		}
+		const student = getLocalStorage('student-login');
+		console.log('stdddd', student);
+
+		records.push({ student, question, ans, timeRecord });
+		setLocalStorage('student-records', records);
 		if (ans === question.choices[0].message) {
 			setCur(cur + question.choices[0].next);
 		}
@@ -65,10 +102,7 @@ function Lessons({ question, setCur, cur, setFinished }) {
 			<>
 				<div
 					className='bacche'
-					onClick={() => {
-						if (!question.end) setCur(cur + 1);
-						else setFinished(true);
-					}}
+					onClick={handleClick}
 				>
 					<h2>{question.message}</h2>
 					<img
@@ -84,10 +118,7 @@ function Lessons({ question, setCur, cur, setFinished }) {
 			<>
 				<div
 					className='teacher'
-					onClick={() => {
-						if (!question.end) setCur(cur + 1);
-						else setFinished(true);
-					}}
+					onClick={handleClick}
 				>
 					<h2>{question.message}</h2>
 					<img
@@ -103,10 +134,7 @@ function Lessons({ question, setCur, cur, setFinished }) {
 			<>
 				<div
 					className='girl'
-					onClick={() => {
-						if (!question.end) setCur(cur + 1);
-						else setFinished(true);
-					}}
+					onClick={handleClick}
 				>
 					<h2>{question.message}</h2>
 					<img
@@ -122,10 +150,7 @@ function Lessons({ question, setCur, cur, setFinished }) {
 			<>
 				<div
 					className='boy'
-					onClick={() => {
-						if (!question.end) setCur(cur + 1);
-						else setFinished(true);
-					}}
+					onClick={handleClick}
 				>
 					<h2>{question.message}</h2>
 					<img

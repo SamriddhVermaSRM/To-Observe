@@ -1,15 +1,50 @@
 import { useState, useEffect } from 'react';
 import Lessons from './Lessons/Lessons';
-import modules from './modules.json';
-import { getLocalStorage } from '../../Utils/LocalStorage';
+import lessonData from './modules.json';
+import {
+	getLocalStorage,
+	removeLocalStorage,
+	setLocalStorage,
+} from '../../Utils/LocalStorage';
 import Login from '../../Components/Login/Login';
 
 function Training() {
 	const [cur, setCur] = useState(-1);
 	const [finished, setFinished] = useState(false);
 	const [formData, setFormData] = useState(getLocalStorage('student-login'));
+	const [modules, setModules] = useState(lessonData);
 	const [module, setModule] = useState();
-	console.log(module);
+	const [newModuleInput, setNewModuleInput] = useState('');
+
+	const fetchNewModule = async () => {
+		if (!newModuleInput.trim()) {
+			alert('Please enter a valid input for the new module.');
+			return;
+		}
+
+		try {
+			const response = await fetch('http://localhost:3000/gen', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify({ input: newModuleInput }),
+			});
+
+			if (!response.ok) {
+				throw new Error('Failed to fetch the new module.');
+			}
+
+			const newModule = await response.json();
+			setModules((prevModules) => [...prevModules, newModule]);
+			setLocalStorage('modules', [...modules, newModule]);
+			setNewModuleInput('');
+			alert('New module fetched and saved successfully!');
+		} catch (error) {
+			console.error('Error fetching new module:', error);
+			alert('An error occurred while fetching the new module.');
+		}
+	};
 
 	// If the user is not logged in, render the Login component
 	if (!formData) {
@@ -23,24 +58,46 @@ function Training() {
 		);
 	}
 
-	if (!module) {
-		console.log(modules);
+	if (formData) {
+		setLocalStorage('student-login', formData);
+	}
 
+	if (!module) {
 		return (
 			<>
 				<main
 					className='training'
 					style={{ background: "url('final_bg.webp')" }}
 				>
-					{Object.keys(modules).map((key) => {
-						console.log(modules[key]);
-						return (
-							<button onClick={() => setModule(modules[key])}>
-								<h1>{key}</h1>
-								<h2>{modules[key].name}</h2>
-							</button>
-						);
-					})}
+					<button
+						className='btns'
+						onClick={() => {
+							removeLocalStorage('student-login');
+							setFormData(null);
+						}}
+					>
+						LogOut
+					</button>
+					<div className='modules'>
+						{Object.keys(modules).map((key) => {
+							console.log(modules[key]);
+							return (
+								<button onClick={() => setModule(modules[key])}>
+									<h1>{key}</h1>
+									<h2>{modules[key].name}</h2>
+								</button>
+							);
+						})}
+					</div>
+					<div className='new-module-box'>
+						<input
+							type='text'
+							value={newModuleInput}
+							onChange={(e) => setNewModuleInput(e.target.value)}
+							placeholder='Enter input for new module'
+						/>
+						<button onClick={fetchNewModule}>Fetch New Module</button>
+					</div>
 				</main>
 			</>
 		);

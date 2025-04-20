@@ -12,8 +12,8 @@ function Home() {
 				<Navbar />
 				<div className='home'>
 					<div className='slogan'>
-						<h1>To Observe</h1>
-						<h3>bridging the gaps to a better living society</h3>
+						<h1 className='name'>TO OBSERVE</h1>
+						<h3>Bridging The Gaps To a Better Living Society</h3>
 					</div>
 					<div className='student'>
 						<img
@@ -73,17 +73,20 @@ function Home() {
 					<h1 className='title'>ABOUT US</h1>
 					<p className='description'>
 						To Observe is an interactive digital platform designed to work in
-						collaboration with schools and educational institutions. It provides
-						realistic simulations of day-to-day social and emotional challenges
-						faced by students. In these simulations, students take on the role
-						of a character in a virtual storyline, making choices and facing
-						consequences based on real-life scenarios. These modules cover
-						topics often left out of traditional curriculums—like dealing with
-						criticism, anxiety, jealousy, social media/virtual addiction,
-						insecurity, relationships, and more. Our aim is to bridge the
-						growing gap between emotional awareness and digital literacy,
-						helping students build real-life values while learning to navigate
-						the complexities of the online world.
+						collaboration with schools and educational institutions.
+						<br />
+						It provides realistic simulations of day-to-day social and emotional
+						challenges faced by students. In these simulations, students take on
+						the role of a character in a virtual storyline, making choices and
+						facing consequences based on real-life scenarios.
+						<br />
+						These modules cover topics often left out of traditional
+						curriculums—like dealing with criticism, anxiety, jealousy, social
+						media/virtual addiction, insecurity, relationships, and more.
+						<br />
+						Our aim is to bridge the growing gap between emotional awareness and
+						digital literacy, helping students build real-life values while
+						learning to navigate the complexities of the online world.
 					</p>
 					<div className='box'>
 						<Link

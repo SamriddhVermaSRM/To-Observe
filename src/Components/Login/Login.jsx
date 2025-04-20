@@ -28,17 +28,19 @@ function Login({ student, setFormData }) {
 					<input
 						type='text'
 						id='name'
+						name='name'
 						placeholder='Full Name'
 						required
 					/>
-					<label htmlFor='email'>Roll Number</label>
+					<label htmlFor='roll'>Roll Number</label>
 					<input
 						type='text'
 						placeholder='Roll Number'
+						name='roll'
 						required
 					/>
 					<label>School Name</label>
-					<select>
+					<select name='school'>
 						<option
 							value='Spring Dale College'
 							key='Spring Dale College'
@@ -93,6 +95,27 @@ function Login({ student, setFormData }) {
 					placeholder='Password'
 					required
 				/>
+				<label>School Name</label>
+				<select name='school'>
+					<option
+						value='Spring Dale College'
+						key='Spring Dale College'
+					>
+						Spring Dale College
+					</option>
+					<option
+						value='Fellowship Missionary School'
+						key='Fellowship Missionary School'
+					>
+						Fellowship Missionary School
+					</option>
+					<option
+						value='CMS'
+						key='CMS'
+					>
+						CMS
+					</option>
+				</select>
 				<button type='submit'>Login</button>
 			</form>
 		</>
