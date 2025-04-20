@@ -13,7 +13,7 @@ Our aim is to bridge the growing gap between emotional awareness and digital lit
   <a href="https://youtu.be/shHuz_2mB-4">Youtube Video for To Observe</a>
   
 ## Presentation Link:
-  <a href=""> PPT link here </a>
+  <a href="https://drive.google.com/file/d/1ooClSy0gNakHTFR18CD2wPHQVYm0ohuI/view?usp=sharing "> To Observe - The Revolutionaries </a>
   
   
 ## Table of Contents:
