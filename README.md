@@ -1,12 +1,26 @@
-# React + Vite
+im is to bridge the growing gap between emotional awareness and digital literacy, helping students build real-life values while learning to navigate the complexities of the online world.
+## Demo Video Link:
+  <a href="#"></a>
+  
+## Presentation Link:
+  <a href=""> PPT link here </a>
+  
+  
+## Table of Contents:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Technology Stack:
+  1) React
+  2) Express js
+  
 
-Currently, two official plugins are available:
+## Contributors:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Team Name: The Revolutionaries
 
-## Expanding the ESLint configuration
+- [Samriddh Pratap Verma](https://github.com/SamriddhVermaSRM)
+- [Sanskriti Srivastava](https://github.com/SanskritiSriv)
+- [Shahnaz](https://github.com/shaz-codes)
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+### Made at:
+<a href="https://hack36.in"> <img src="https://postimage.me/images/2025/04/19/built-at-hack36.png" height=24px> </a>
